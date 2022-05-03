@@ -87,8 +87,4 @@ public class BookingsDetails{
         this.date = date;
         this.service_name = service_name;
     }
-
-
-
-
 }

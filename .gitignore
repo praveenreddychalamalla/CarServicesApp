@@ -7,25 +7,6 @@ Explore
  
 @praveenreddychalamalla 
 praveenreddychalamalla
-/
-Data-Masking-XML-Data
-Public
-forked from Sibin-Thomas/Data-Masking-XML-Data
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Data-Masking-XML-Data/.gitignore
-@Sibin-Thomas
-Sibin-Thomas removed Anonymized.xml and updated ../.gitignore
-Latest commit 51cf671 15 days ago
- History
- 1 contributor
-47 lines (47 sloc)  595 Bytes
   
 *#
 *.iml
@@ -87,3 +68,25 @@ Training
 Blog
 About
 Loading complete
+
+# dependencies
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
+
+# testing
+/frontend/coverage
+
+# production
+/frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
