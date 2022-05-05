@@ -1,4 +1,4 @@
-package com.example.backend.DAO;
+package com.example.backend.dao;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

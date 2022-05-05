@@ -1,7 +1,7 @@
 package com.example.backend.controllers;
 
-import com.example.backend.DAO.*;
-import com.example.backend.DAO.Service;
+import com.example.backend.dao.*;
+import com.example.backend.dao.Service;
 import com.example.backend.services.BookServiceJpaRepository;
 import com.example.backend.services.DetailsJpaRepository;
 import com.example.backend.services.ServiceJpaRepository;

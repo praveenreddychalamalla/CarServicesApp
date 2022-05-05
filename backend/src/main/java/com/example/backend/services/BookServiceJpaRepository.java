@@ -1,6 +1,6 @@
 package com.example.backend.services;
 
-import com.example.backend.DAO.BookingsDetails;
+import com.example.backend.dao.BookingsDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

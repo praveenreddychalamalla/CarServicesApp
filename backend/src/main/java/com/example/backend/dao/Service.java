@@ -1,6 +1,4 @@
-package com.example.backend.DAO;
-
-import org.hibernate.annotations.Type;
+package com.example.backend.dao;
 
 import javax.persistence.*;
 
