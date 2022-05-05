@@ -3,7 +3,7 @@
 Service provider logging in details database
  */
 
-package com.example.carServices.sql;
+package com.example.backend.DAO;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

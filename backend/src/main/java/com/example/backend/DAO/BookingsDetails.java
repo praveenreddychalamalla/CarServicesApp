@@ -1,9 +1,8 @@
-package com.example.carServices.sql;
+package com.example.backend.DAO;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Bookings_Details")
 public class BookingsDetails{
 
     public BookingsDetails(){}
@@ -48,9 +47,9 @@ public class BookingsDetails{
         this.date = date;
     }
 
-    @TableGenerator(name = "booking_id", initialValue = 10000, allocationSize = 100)
+  //  @TableGenerator(name = "booking_id", initialValue = 10000, allocationSize = 100)
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "booking_id")
+    @GeneratedValue
     private long booking_id;
 
     public long getCost() {
@@ -87,4 +86,8 @@ public class BookingsDetails{
         this.date = date;
         this.service_name = service_name;
     }
+
+
+
+
 }

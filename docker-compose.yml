@@ -1,27 +1,36 @@
-version: '3.8'
+version: '3.5'
 services:
   app:
     build:
-      context: ./frontend
+      context: .
     volumes:
-      - .:/CarServicesApp
+      - .:/my-app
 
   frontend:
-    image: carservices-frontend
+    image: 9542289925/carservices-frontend
     ports:
-      - 3000:3000
-    container_name: frontend_container1
+      - "3000:3000"
+    container_name: frontend-container
     command: npm start
+
   backend:
-    image: carservices-backend
+    image: 9542289925/carservices-backend
     ports:
-      - 8557:8557
-    container_name: backend_container1
+      - "8557:8557"
+    container_name: backend-container
+    environment:
+      - MYSQL_HOST=mydb
+      - MYSQL_PORT=3306
+    depends_on:
+      - mydb
 
-
-
-
-
-
-
-
+  mydb:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    container_name: database-container
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=CarServices
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=password

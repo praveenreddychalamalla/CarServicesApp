@@ -1,4 +1,6 @@
-package com.example.carServices.sql;
+package com.example.backend.DAO;
+
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -6,9 +8,8 @@ import javax.persistence.*;
 public class Service {
     public Service(){}
 
-    @TableGenerator(name = "id", initialValue = 10000, allocationSize = 100)
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO )
     private Long id;
 
     public Long getId() {
@@ -66,7 +67,7 @@ public class Service {
         this.imageLink = imageLink;
     }
 
-    @Column(name = "imageLink", length = 50000)
+    @Column(length = 15000)
     private String imageLink;
 
 }

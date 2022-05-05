@@ -1,5 +1,6 @@
-package com.example.carServices.sql;
+package com.example.backend.services;
 
+import com.example.backend.DAO.Service;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

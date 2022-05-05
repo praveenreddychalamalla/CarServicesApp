@@ -1,6 +1,11 @@
-package com.example.carServices;
+package com.example.backend.controllers;
 
-import com.example.carServices.sql.*;
+import com.example.backend.DAO.*;
+import com.example.backend.DAO.Service;
+import com.example.backend.services.BookServiceJpaRepository;
+import com.example.backend.services.DetailsJpaRepository;
+import com.example.backend.services.ServiceJpaRepository;
+import com.example.backend.services.SubServiceJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,9 +14,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
 
-public class CarRestServices {
-    @Autowired
-    private ServicesHardCoded servicesHardCoded;
+public class Controller {
 
     @Autowired
     private DetailsJpaRepository detailsJpaRepository;
@@ -45,7 +48,7 @@ public class CarRestServices {
 
     @GetMapping("/users/services/getAllServices")
     public List<Service> getAllServices(){
-       return serviceJpaRepository.findAll();
+        return serviceJpaRepository.findAll();
     }
 
     @GetMapping("/users/services/getSubServices/{serviceProviderID}")
